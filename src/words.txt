@@ -998,5 +998,3 @@
   teeth
   shell
   neck
-  words.txt
-  Displaying words.txt.

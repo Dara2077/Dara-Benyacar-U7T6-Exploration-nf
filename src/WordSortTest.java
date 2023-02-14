@@ -46,7 +46,7 @@ public class WordSortTest
     {
         try
         {
-            Scanner input = new Scanner(new File("words.txt"));
+            Scanner input = new Scanner(new File("src/words.txt"));
             while (input.hasNext())
             {
                 String word = input.next();
