@@ -46,11 +46,11 @@ public class Sort
     // Part C.  Sorting a 1000-word list!
     public static void selectionSortWordList(ArrayList<String> words)
     {
-        for (int i = 0; i < words.size(); i ++){
+        for (int i = 0; i < words.size() -1; i ++){
             String min = words.get(i);
             int index = i;
             for (int j = i + 1; j < words.size(); j++){
-                if (words.get(j).compareTo(min) > 0){
+                if (words.get(j).compareTo(min) < 0){
                     min = words.get(j);
                     index = j;
                 }
@@ -62,11 +62,11 @@ public class Sort
     public static void insertionSortWordList(ArrayList<String> words)
     {
         for (int i = 1; i < words.size(); i ++){
-            int compareTo = i - 1;
             String temp = words.get(i);
-            while (compareTo >= 0 && (temp.compareTo(words.get(compareTo)) < 0)){
-                words.add(original - 1, words.remove(original));
-                original --;
+            int currentIndex = i;
+            while (currentIndex -1 >= 0 && (temp.compareTo(words.get(currentIndex - 1)) < 0)){
+                words.set(currentIndex, words.set(currentIndex -1, temp));
+                currentIndex --;
             }
         }
     }
